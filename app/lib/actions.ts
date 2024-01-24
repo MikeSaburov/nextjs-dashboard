@@ -19,4 +19,5 @@ export async function createInvoice(formData: FormData) {
     status: formData.get('status'),
   });
   const amountInCent = amount * 100;
+  const date = new Date().toString().split('T')[0];
 }
