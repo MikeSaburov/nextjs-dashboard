@@ -2,6 +2,7 @@
 
 import { z } from 'zod';
 import { sql } from '@vercel/postgres';
+import { revalidatePath } from 'next/cache';
 
 const FormSchema = z.object({
   id: z.string(),
