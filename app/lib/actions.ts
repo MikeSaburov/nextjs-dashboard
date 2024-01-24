@@ -1,5 +1,7 @@
 'use server';
 
+import { z } from 'zod';
+
 export async function createInvoice(formData: FormData) {
   const rawFormData = {
     customerId: formData.get('customerId'),
@@ -7,5 +9,5 @@ export async function createInvoice(formData: FormData) {
     status: formData.get('status'),
   };
   // Test it out:
-  console.log(rawFormData);
+  console.log(typeof rawFormData.amount);
 }
